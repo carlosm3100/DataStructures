@@ -58,10 +58,6 @@ public class Main extends Application {
         //Main Layout
         Pane root1 = new Pane();
 
-        Label text = new Label("Data Structures");
-        text.setLayoutY(50);
-        text.setLayoutX(BTN_X_PADDING);
-
         Line line_top = new Line();
         line_top.setStartX(BTN_X_PADDING);
         line_top.setStartY(BTN_HEIGHT + BTN_Y_PADDING * 2);
@@ -74,61 +70,65 @@ public class Main extends Application {
         line_part.setEndX(200);
         line_part.setEndY(SCENE_HEIGHT-BTN_Y_PADDING);
 
-        root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8, text, line_top, line_part);
+        TextArea textArea = new TextArea();
+        textArea.setWrapText(true);
+        textArea.setEditable(false);
+        textArea.setMaxWidth(184);
+        textArea.setPrefHeight(SCENE_HEIGHT-BTN_HEIGHT-BTN_Y_PADDING*5);
+        textArea.setLayoutX(BTN_X_PADDING);
+        textArea.setLayoutY(BTN_Y_PADDING*3+BTN_HEIGHT);
+
+        root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8, line_top, line_part, textArea);
 
         /**
          * Usage: Code your objects, then add object at
          * root1.getChildren().setAll(btn1, btn2, btn3, btn4,text, your objects...,n);
          */
         btn1.setOnAction(e -> {
-            Rectangle rect = new Rectangle(500,100,100,100);
-            text.setText("Static Array");
+            textArea.setText("Explanation for Static Array");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part,
-                    rect);
+                    line_top, line_part, textArea);
         });
 
         btn2.setOnAction(e -> {
-            Circle circ = new Circle(500,200,20);
-            text.setText("Dynamic Array");
-            root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part, circ);
+            textArea.setText("Explanation for Dynamic Array");
+            root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8, line_top, line_part, textArea);
         });
 
         btn3.setOnAction(e -> {
-            text.setText("Singly-Linked List");
+            textArea.setText("Explanation for Singly-Linked List");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         btn4.setOnAction(e -> {
-            text.setText("Doubly-Linked List");
+            textArea.setText("Explanation for Doubly-Linked List");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         btn5.setOnAction(e -> {
-            text.setText("Stack");
+            textArea.setText("Explanation for Stack");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         btn6.setOnAction(e -> {
-            text.setText("Queue");
+            textArea.setText("Explanation for Queue");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         btn7.setOnAction(e -> {
-            text.setText("Binary Search Tree");
+            textArea.setText("Explanation for Binary Search Tree");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         btn8.setOnAction(e -> {
-            text.setText("Hash Table");
+            textArea.setText("Explanation for Hash Table");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    text, line_top, line_part);
+                    line_top, line_part, textArea);
         });
 
         Scene sceneStaticArray = new Scene(root1, 775,450);
@@ -137,7 +137,6 @@ public class Main extends Application {
         primaryStage.setScene(sceneStaticArray);
         primaryStage.show();
 
-        System.out.println(btn1.getHeight());
     }
 
     public static void main(String[] args) {
@@ -145,4 +144,3 @@ public class Main extends Application {
     }
 
 }
-

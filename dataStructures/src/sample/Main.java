@@ -85,9 +85,15 @@ public class Main extends Application {
          * root1.getChildren().setAll(btn1, btn2, btn3, btn4,text, your objects...,n);
          */
         btn1.setOnAction(e -> {
-            textArea.setText("Explanation for Static Array");
+            // Lockers
+            Locker locker = new Locker();
+
+            textArea.setText("Explanation for Static Arrays");
             root1.getChildren().setAll(btn1, btn2, btn3, btn4,btn5,btn6, btn7, btn8,
-                    line_top, line_part, textArea);
+                    line_top, line_part, textArea,
+                    locker.Locker(225, 150), locker.inner_rect(225,150), locker.handle(225,150), locker.locker_number(225,150,"1"),
+                    locker.Locker(400,150), locker.inner_rect(400,150), locker.handle(400,150), locker.locker_number(400, 150,"2"),
+                    locker.Locker(575,150), locker.inner_rect(575,150), locker.handle(575,150), locker.locker_number(575, 150,"3"));
         });
 
         btn2.setOnAction(e -> {
